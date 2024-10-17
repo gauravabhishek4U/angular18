@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-4">
+        One Way Binding from .ts to .html
+    </div>
+    <div class="col-4">
+        
+    </div>
+    <div class="col-4">
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4">
+                <h3>Interpolation</h3>
+                <h5>{{courseName}}</h5>
+                <h5>{{inputType}}</h5>
+                <input type="text" value="{{rollNo}}" placeholder="Enter Your Roll No"/>
+                <input type="{{inputType}}" />
+            </div>
+            <div class="col-4">
+                <h3>Property Binding</h3>
+                <div [class]="myClassName">danger</div>
+                <input type="text" [value]="courseName" placeholder="Enter Course Name" />
+            </div>
+            <div class="col-4">
+                <button class="btn btn-success" (click)="showAlert('Welcome Angular 18')">Show Welcome</button>
+                <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-4">
+        <input type="text" [(ngModel)]="courseName" /> -{{courseName}}
+        
+    </div>
+</div>
