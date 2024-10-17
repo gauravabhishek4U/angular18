@@ -32,7 +32,24 @@
     </div>
     
     <div class="col-4">
-        <input type="text" [(ngModel)]="courseName" /> -{{courseName}}
         
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <h3>Two way data binding using ngModel</h3>
+        <input type="text" [(ngModel)]="courseName" /> ={{courseName}}
+        <select [(ngModel)]="cityName">
+            <option value="">Select</option>
+            <option value="New Town">New Town</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Delhi">Delhi</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <h3>Two way data binding using Signal</h3>
+        <h5>{{firstName()}}</h5>
     </div>
 </div>

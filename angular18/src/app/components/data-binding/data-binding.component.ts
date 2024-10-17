@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -17,6 +17,8 @@ rollNo:number = 123;
 isIndian:boolean = false;
 currentDate:Date = new Date();
 myClassName:string = "bg-primary";
+cityName:string = "Kolkata"
+firstName = signal("Abhishek");
 
 constructor(){}
 
@@ -26,6 +28,7 @@ showAlert(message:string){
 
 changeCourseName(){
   this.courseName = "React Js";
+  this.firstName.set("Vicky")
 }
 
 }
