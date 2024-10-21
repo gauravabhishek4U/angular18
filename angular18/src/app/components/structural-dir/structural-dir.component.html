@@ -6,12 +6,52 @@
             <h4>Div 1</h4>
         </div>
     </div>
-    <div class="col-3"></div>
-    <div class="col-3"></div>
-    <div class="col-3"></div>
+    <div class="col-3">
+        <div *ngIf="isDiv2Visible" class="bg-success p-3 text-center">
+            <h4>Div 2</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="num1 == num2" class="bg-secondary p-3 text-center">
+            <h4>Div 3</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="selectedCountry == 'India'" class="bg-primary p-3 text-center">
+            <h4>Div 4</h4>
+        </div>
+    </div>
 </div>
 <div class="row pt-3">
-    <div class="col-3"></div>
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+        <button class="btn btn-primary mx-2" (click)="showDiv1()">Show</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
+    </div>
+    <div class="col-3 text-center">
+        <input type="text" [(ngModel)]="num1" placeholder="Num 1" />
+        <input type="text" [(ngModel)]="num2" placeholder="Num 2" />
+    </div>
+    <div class="col-3 text-center">
+        <select [(ngModel)]="selectedCountry">
+            <option value="">Select</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Japan">Japan</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityArray">
+                {{ city }}
+            </li>
+        </ul>
+    </div>
     <div class="col-3"></div>
     <div class="col-3"></div>
     <div class="col-3"></div>
